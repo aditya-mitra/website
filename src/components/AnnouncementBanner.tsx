@@ -20,10 +20,6 @@ const AnnoucementBannerWrapper = styled.div`
         @media(max-width: 472px) {
             right: 1rem;
         }
-
-        @media(max-width: 320px) {
-            right: .5rem;
-        }
     }
 
     .cross {
@@ -58,15 +54,6 @@ const StyledAnnouncementBanner = styled(Link)`
     padding: 1rem 0;
     font-weight: 600;
     text-align: center;
-    font-size: 90%;
-
-    @media(max-width: 472px) {
-        text-align: left;
-    }
-
-    @media(max-width: 410px) {
-        text-align: center;
-    }
 
     @media(max-width: 320px) {
         padding: .8rem;
@@ -74,6 +61,8 @@ const StyledAnnouncementBanner = styled(Link)`
   }
 
   .openings {
+    display: inline flex;
+    align-items: center;
     background: ${colors.white};
     color: ${colors.grey};
     padding: .5rem 1.4rem;
@@ -81,6 +70,7 @@ const StyledAnnouncementBanner = styled(Link)`
     margin-left: 2rem;
 
     @media(max-width: 505px) {
+        display: none;
         margin-left: 1rem;
     }
 
@@ -89,17 +79,12 @@ const StyledAnnouncementBanner = styled(Link)`
     }
   }
 
-  i {
-      margin-left: .3rem;
+  .arrow {
+      margin-left: .8rem;
 
       @media(max-width: 472px) {
           display: none;
       }
-  }
-
-  .arrow {
-      height: 8px;
-      width: 15px;
   }
 `;
 
@@ -157,25 +142,10 @@ const AnnoucementBanner = () => {
                         Wanna help make Gitpod better? Join our team!
                         <span className="openings">
                             <strong>{jobs.length}</strong>
-                            &nbsp;Openings <i>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="283"
-                                    height="118"
-                                    fill="none"
-                                    viewBox="0 0 283 118"
-                                    className="arrow"
-                                >
-                                    <path
-                                        stroke="#000"
-                                        strokeLinecap="square"
-                                        strokeMiterlimit="10"
-                                        strokeWidth="18"
-                                        d="M224 9l50 50-50 50"
-                                    ></path>
-                                    <path stroke="#000" strokeWidth="18" d="M274.023 58L0.023 59.07"></path>
-                                </svg>
-                            </i>
+                            &nbsp;Openings
+                                <svg className="arrow" width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 1.5L19 5.5M19 5.5L15 9.5M19 5.5H1" stroke="#3D515E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </span>
                     </div>
                 </div>
